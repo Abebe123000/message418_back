@@ -14,12 +14,12 @@ app.get('/kv/put', async (c) => {
   return c.text('put value!')
 })
 
-app.get('kv/get', async (c) => {
+app.get('/kv/get', async (c) => {
   const hogeValue = await c.env.massage418_session_kv.get('hoge')
   return c.text(hogeValue ?? 'no value!')
 })
 
-app.get('kv/delete', async (c) => {
+app.get('/kv/delete', async (c) => {
   await c.env.massage418_session_kv.delete('hoge')
   return c.text('delete value!')
 })
