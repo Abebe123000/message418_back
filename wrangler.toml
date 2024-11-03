@@ -1,0 +1,37 @@
+name = "message418_back"
+main = "src/index.ts"
+compatibility_date = "2024-11-03"
+
+# compatibility_flags = [ "nodejs_compat" ]
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
+
+[[d1_databases]]
+binding = "DB"
+database_name = "message418_db"
+database_id = "4a2aca80-38dc-4b50-99a6-5c1bc1440e66"
+
+[[kv_namespaces]]
+binding = "massage418_session_kv"
+id = "0d6ccf0236a34369be30fe70dd8a02ef"
