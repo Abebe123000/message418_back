@@ -100,11 +100,11 @@ app.post("/api/v1/login", async (c) => {
 
 	// authentication OK!
 
-  // delete old session
+	// delete old session
 	const oldSessionId = getCookie(c, "sessionId");
-  if (oldSessionId) {
-    await c.env.massage418_session_kv.delete(oldSessionId)
-  }
+	if (oldSessionId) {
+		await c.env.massage418_session_kv.delete(oldSessionId);
+	}
 
 	// create new session
 	// TODO: 本来は sessionId は暗号化する
@@ -122,9 +122,9 @@ app.post("/api/v1/login", async (c) => {
 
 app.post("/api/v1/logout", async (c) => {
 	const sessionId = getCookie(c, "sessionId");
-  if (sessionId) {
-    await c.env.massage418_session_kv.delete(sessionId)
-  }
+	if (sessionId) {
+		await c.env.massage418_session_kv.delete(sessionId);
+	}
 	return c.text("logout!");
 });
 
