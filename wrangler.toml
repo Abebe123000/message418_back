@@ -28,7 +28,7 @@ compatibility_date = "2024-11-03"
 # head_sampling_rate = 1
 
 [[d1_databases]]
-binding = "DB"
+binding = "message418_db"
 database_name = "message418_db"
 database_id = "4a2aca80-38dc-4b50-99a6-5c1bc1440e66"
 
