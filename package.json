@@ -1,17 +1,26 @@
 {
-  "name": "message418_back",
-  "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify"
-  },
-  "dependencies": {
-    "@prisma/adapter-d1": "^5.21.1",
-    "@prisma/client": "^5.21.1",
-    "hono": "^4.6.8"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241022.0",
-    "prisma": "^5.21.1",
-    "wrangler": "^3.83.0"
-  }
+	"name": "message418_back",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"db-delete": "wrangler d1 execute message418_db --local --command \"delete from User\"",
+		"db-select": "wrangler d1 execute message418_db --local --command \"select * from User\"",
+		"format": "biome check --write src"
+	},
+	"dependencies": {
+		"@prisma/adapter-d1": "^5.21.1",
+		"@prisma/client": "^5.21.1",
+		"bcryptjs": "^2.4.3",
+		"hono": "^4.6.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@cloudflare/workers-types": "^4.20241022.0",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/node": "^22.8.7",
+		"prisma": "^5.21.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.3",
+		"wrangler": "^3.83.0"
+	}
 }
